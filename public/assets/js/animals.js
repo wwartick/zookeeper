@@ -29,9 +29,9 @@ const getAnimals = (formData = {}) => {
     queryUrl += `${key}=${value}&`;
   });
 
-  // console.log(queryUrl);
+  console.log(queryUrl);
 
-  fetch(queryUrl) 
+  fetch(queryUrl)
     .then(response => {
       if (!response.ok) {
         return alert('Error: ' + response.statusText);
@@ -42,7 +42,6 @@ const getAnimals = (formData = {}) => {
       console.log(animalData);
       printResults(animalData);
     });
-
 };
 
 const handleGetAnimalsSubmit = event => {
